@@ -8,10 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
-  <!-- Font Awesome (иконки) -->
+  <!-- Font Awesome (иконки для контактов и бургера) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <!-- Внешний CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -35,16 +35,21 @@
 <main>
   <!-- ГЕРОЙ -->
   <section class="hero">
-    <div class="container hero-content">
-      <h1>СОЗДАВАЙТЕ <span>ИСКУССТВО</span></h1>
-      <div class="subtitle">Художественная школа для взрослых</div>
-      <p>
-        Обучение рисунку и живописи для взрослых с любым уровнем подготовки.
-        Мы помогаем развивать вкус, технику и уверенность в собственном стиле.
-      </p>
-      <div class="hero-btns">
-        <a href="#" class="btn">Записаться на пробный урок</a>
-        <a href="#directions" class="btn btn-outline">Посмотреть направления</a>
+    <div class="container hero-wrapper">
+      <div class="hero-content">
+        <h1>СОЗДАВАЙТЕ <span>ИСКУССТВО</span></h1>
+        <div class="subtitle">Художественная школа для взрослых</div>
+        <p>
+          Обучение рисунку и живописи для взрослых с любым уровнем подготовки.
+          Мы помогаем развивать вкус, технику и уверенность в собственном стиле.
+        </p>
+        <div class="hero-btns">
+          <a href="#" class="btn">Записаться на пробный урок</a>
+          <a href="#directions" class="btn btn-outline">Посмотреть направления</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://picsum.photos/seed/art/600/400" alt="Художественная школа" />
       </div>
     </div>
   </section>
@@ -83,23 +88,23 @@
     </div>
   </section>
 
-  <!-- ПРЕПОДАВАТЕЛИ -->
+  <!-- ПРЕПОДАВАТЕЛИ с фото -->
   <section id="teachers">
     <div class="container">
       <h2 class="section-title">Преподаватели</h2>
       <div class="teachers-grid">
         <div class="teacher-card">
-          <div class="avatar"><i class="fas fa-user-circle"></i></div>
+          <img src="https://picsum.photos/seed/gleb/200/200" alt="Глеб Калитин" class="teacher-photo" />
           <h4>Глеб Калитин</h4>
           <div class="role">Академический рисунок и живопись (портретная мастерская)</div>
         </div>
         <div class="teacher-card">
-          <div class="avatar"><i class="fas fa-user-circle"></i></div>
+          <img src="https://picsum.photos/seed/polina/200/200" alt="Полина Гликерия" class="teacher-photo" />
           <h4>Полина Гликерия</h4>
           <div class="role">Живопись, работа с цветом и фактурой</div>
         </div>
         <div class="teacher-card">
-          <div class="avatar"><i class="fas fa-user-circle"></i></div>
+          <img src="https://picsum.photos/seed/anna/200/200" alt="Анна Петрова" class="teacher-photo" />
           <h4>Анна Петрова</h4>
           <div class="role">Академический рисунок и композиция</div>
         </div>
@@ -107,7 +112,7 @@
     </div>
   </section>
 
-  <!-- ИНФОРМАЦИЯ (контакты + как начать) -->
+  <!-- ИНФОРМАЦИЯ -->
   <section id="info" style="background: #f7efe8;">
     <div class="container">
       <h2 class="section-title">Информация</h2>
@@ -196,7 +201,6 @@
 
 <!-- JS для бургера и аккордеона -->
 <script>
-  // Бургер-меню
   const burger = document.getElementById('burgerBtn');
   const navMenu = document.getElementById('navMenu');
 
@@ -210,7 +214,6 @@
     }
   });
 
-  // Аккордеон FAQ
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
@@ -222,7 +225,6 @@
     });
   });
 
-  // Закрываем меню при клике на ссылку (для мобильных)
   document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('open');
