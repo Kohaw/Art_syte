@@ -18,7 +18,7 @@ body {
   padding: 0 20px;
 }
 
-/* ===== КНОПКИ (с подсветкой) ===== */
+/* ===== КНОПКИ ===== */
 .btn {
   display: inline-block;
   padding: 0.9rem 2.2rem;
@@ -33,25 +33,21 @@ body {
   color: #fff;
   box-shadow: 0 4px 12px rgba(198, 122, 92, 0.3);
 }
-
 .btn:hover {
   background-color: #b05f3f;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(198, 122, 92, 0.4);
 }
-
 .btn:active {
   transform: scale(0.96);
   box-shadow: 0 2px 6px rgba(198, 122, 92, 0.3);
 }
-
 .btn-outline {
   background-color: transparent;
   color: #c67a5c;
   border: 2px solid #c67a5c;
   box-shadow: none;
 }
-
 .btn-outline:hover {
   background-color: #c67a5c;
   color: #fff;
@@ -66,14 +62,12 @@ header {
   top: 0;
   z-index: 100;
 }
-
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
 }
-
 .logo {
   font-size: 1.6rem;
   font-weight: 700;
@@ -83,7 +77,6 @@ header {
 .logo span {
   color: #c67a5c;
 }
-
 nav ul {
   display: flex;
   gap: 2rem;
@@ -98,7 +91,6 @@ nav a {
 nav a:hover {
   color: #c67a5c;
 }
-
 .burger {
   display: none;
   font-size: 1.8rem;
@@ -108,26 +100,23 @@ nav a:hover {
   color: #2d2a24;
 }
 
-/* ===== ГЕРОЙ С ФОТО ===== */
+/* ===== ГЕРОЙ ===== */
 .hero {
   padding: 4rem 0 5rem;
   background: linear-gradient(135deg, #f7efe8 0%, #f0e4d9 100%);
   border-radius: 0 0 40px 40px;
   margin-bottom: 3rem;
 }
-
 .hero-wrapper {
   display: flex;
   align-items: center;
   gap: 4rem;
   flex-wrap: wrap;
 }
-
 .hero-content {
   flex: 1 1 50%;
   max-width: 700px;
 }
-
 .hero h1 {
   font-size: 3.8rem;
   font-weight: 700;
@@ -138,32 +127,27 @@ nav a:hover {
 .hero h1 span {
   color: #c67a5c;
 }
-
 .hero .subtitle {
   font-size: 1.4rem;
   font-weight: 400;
   color: #5a4e44;
   margin-bottom: 1.5rem;
 }
-
 .hero p {
   font-size: 1.1rem;
   max-width: 550px;
   margin-bottom: 2rem;
   color: #3d352e;
 }
-
 .hero-btns {
   display: flex;
   gap: 1.2rem;
   flex-wrap: wrap;
 }
-
 .hero-image {
   flex: 1 1 40%;
   min-width: 280px;
 }
-
 .hero-image img {
   width: 100%;
   height: auto;
@@ -172,11 +156,10 @@ nav a:hover {
   display: block;
 }
 
-/* ===== СЕКЦИИ общие ===== */
+/* ===== ОБЩИЕ СЕКЦИИ ===== */
 section {
   padding: 3.5rem 0;
 }
-
 .section-title {
   font-size: 2.4rem;
   font-weight: 700;
@@ -206,7 +189,6 @@ section {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
 .direction-card {
   background: #fff;
   padding: 2rem 1.8rem;
@@ -228,13 +210,12 @@ section {
   color: #5a4e44;
 }
 
-/* ===== ПРЕПОДАВАТЕЛИ с фото ===== */
+/* ===== ПРЕПОДАВАТЕЛИ ===== */
 .teachers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
 .teacher-card {
   background: #fff;
   border-radius: 24px;
@@ -247,7 +228,6 @@ section {
 .teacher-card:hover {
   transform: translateY(-5px);
 }
-
 .teacher-photo {
   width: 120px;
   height: 120px;
@@ -258,11 +238,9 @@ section {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s;
 }
-
 .teacher-card:hover .teacher-photo {
   transform: scale(1.05);
 }
-
 .teacher-card h4 {
   font-size: 1.3rem;
   margin-bottom: 0.3rem;
@@ -282,7 +260,6 @@ section {
   border-radius: 32px;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
 }
-
 .info-contacts p {
   margin-bottom: 0.5rem;
   display: flex;
@@ -293,7 +270,6 @@ section {
   width: 1.8rem;
   color: #c67a5c;
 }
-
 .info-start p {
   margin-bottom: 1.5rem;
   color: #3d352e;
@@ -305,7 +281,6 @@ section {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
 .goods-card {
   background: #fff;
   padding: 1.8rem;
@@ -333,14 +308,12 @@ section {
   gap: 1rem;
   max-width: 700px;
 }
-
 .faq-item {
   background: #fff;
   border-radius: 16px;
   border: 1px solid #f0e4d9;
   overflow: hidden;
 }
-
 .faq-question {
   width: 100%;
   background: none;
@@ -363,7 +336,6 @@ section {
   transition: transform 0.3s;
   color: #c67a5c;
 }
-
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -371,7 +343,6 @@ section {
   padding: 0 1.8rem;
   color: #3d352e;
 }
-
 .faq-item.active .faq-answer {
   max-height: 200px;
   padding: 0 1.8rem 1.5rem;
@@ -409,7 +380,6 @@ footer {
 }
 
 /* ===== АДАПТИВНОСТЬ ===== */
-
 @media (max-width: 1024px) {
   .hero h1 {
     font-size: 2.8rem;
@@ -457,7 +427,6 @@ footer {
   nav ul.open {
     display: flex;
   }
-
   .hero {
     padding: 2.5rem 0 3rem;
   }
@@ -481,22 +450,18 @@ footer {
   .hero-image {
     max-width: 100%;
   }
-
   .section-title {
     font-size: 1.8rem;
   }
-
   .directions-grid,
   .teachers-grid,
   .goods-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-
   .info-wrapper {
     padding: 1.5rem;
   }
-
   .footer-inner {
     flex-direction: column;
     text-align: center;
@@ -505,11 +470,9 @@ footer {
     display: inline-block;
     margin: 0.3rem 0.8rem;
   }
-
   .container {
     padding: 0 16px;
   }
-
   .teacher-photo {
     width: 100px;
     height: 100px;
