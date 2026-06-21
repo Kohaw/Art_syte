@@ -234,6 +234,39 @@
     });
   });
 </script>
+<!-- МОДАЛЬНОЕ ОКНО -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-content">
+    <!-- Кнопка закрытия -->
+    <button class="modal-close" id="modalClose">&times;</button>
 
+    <!-- Состояние 1: Форма -->
+    <div id="formState">
+      <h2 class="modal-title">ЗАПИСЬ НА ПРОБНОЕ ЗАНЯТИЕ</h2>
+      <form id="bookingForm" novalidate>
+        <div class="form-group">
+          <label for="name">ИМЯ</label>
+          <input type="text" id="name" placeholder="Введите имя" required />
+          <span class="error-message" id="nameError">Введите имя (только буквы)</span>
+        </div>
+        <div class="form-group">
+          <label for="phone">НОМЕР ТЕЛЕФОНА</label>
+          <input type="tel" id="phone" placeholder="+7 (999) 123-45-67" required />
+          <span class="error-message" id="phoneError">Введите номер (только цифры)</span>
+        </div>
+        <button type="submit" class="btn modal-btn">Оставить заявку</button>
+      </form>
+    </div>
+
+    <!-- Состояние 2: Успех (скрыто по умолчанию) -->
+    <div id="successState" style="display: none;">
+      <div class="success-icon">✔</div>
+      <h2 class="modal-title">APT-АКАДЕМИЯ</h2>
+      <p class="success-text">Вы успешно оставили заявку</p>
+      <p class="success-subtext">Мы вам перезвоним</p>
+      <button class="btn modal-btn" id="backButton">Вернуться</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
