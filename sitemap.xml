@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://kohaw.github.io/cat_syte/</loc>
+        <loc>https://kohaw.github.io/Art_syte/</loc>
         <lastmod>2024-12-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://kohaw.github.io/cat_syte/breeds.html</loc>
+        <loc>https://kohaw.github.io/Art_syte/breeds.html</loc>
         <lastmod>2024-12-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://kohaw.github.io/cat_syte/care.html</loc>
+        <loc>https://kohaw.github.io/Art_syte/care.html</loc>
         <lastmod>2024-12-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
