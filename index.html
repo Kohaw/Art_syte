@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>АРТ-АКАДЕМИЯ — художественная школа</title>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Внешний CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -30,7 +33,7 @@
 </header>
 
 <main>
-  <!-- ГЛАВНАЯ -->
+  <!-- ГЕРОЙ -->
   <section class="hero">
     <div class="container hero-wrapper">
       <div class="hero-content">
@@ -41,7 +44,6 @@
           Мы помогаем развивать вкус, технику и уверенность в собственном стиле.
         </p>
         <div class="hero-btns">
-          <!-- КНОПКА -->
           <a href="#" class="btn open-modal">Записаться на пробный урок</a>
           <a href="#directions" class="btn btn-outline">Посмотреть направления</a>
         </div>
@@ -129,7 +131,6 @@
             удобному времени и интересующему направлению. Первый шаг к творчеству может быть
             очень простым.
           </p>
-          <!-- КНОПКА -->
           <a href="#" class="btn open-modal">Записаться на пробный урок</a>
         </div>
       </div>
@@ -137,28 +138,28 @@
   </section>
 
   <!-- ПРИНАДЛЕЖНОСТИ -->
-<section id="goods">
-  <div class="container">
-    <h2 class="section-title">Принадлежности на занятиях</h2>
-    <div class="goods-grid">
-      <div class="goods-card">
-        <img src="./images/goods1.jpg" alt="Набор для 1 занятия" class="goods-image" />
-        <h4>Набор для 1 занятия</h4>
-        <p>Кисти, палитра, краски, акварель, ткани и т.д.</p>
-      </div>
-      <div class="goods-card">
-        <img src="./images/goods2.jpg" alt="Бумага и альбомы" class="goods-image" />
-        <h4>Бумага и альбомы</h4>
-        <p>Альбомы для акварели, акварель, ткани и т.д.</p>
-      </div>
-      <div class="goods-card">
-        <img src="./images/goods3.jpg" alt="Карандаши" class="goods-image" />
-        <h4>Карандаши</h4>
-        <p>Наборы графитовых карандашей (от 2Н до 8Н), цветные карандаши (12–24 цвета).</p>
+  <section id="goods">
+    <div class="container">
+      <h2 class="section-title">Принадлежности на занятиях</h2>
+      <div class="goods-grid">
+        <div class="goods-card">
+          <img src="./images/goods1.jpg" alt="Набор для 1 занятия" class="goods-image" />
+          <h4>Набор для 1 занятия</h4>
+          <p>Кисти, палитра, краски, акварель, ткани и т.д.</p>
+        </div>
+        <div class="goods-card">
+          <img src="./images/goods2.jpg" alt="Бумага и альбомы" class="goods-image" />
+          <h4>Бумага и альбомы</h4>
+          <p>Альбомы для акварели, акварель, ткани и т.д.</p>
+        </div>
+        <div class="goods-card">
+          <img src="./images/goods3.jpg" alt="Карандаши" class="goods-image" />
+          <h4>Карандаши</h4>
+          <p>Наборы графитовых карандашей (от 2Н до 8Н), цветные карандаши (12–24 цвета).</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- FAQ -->
   <section id="faq" style="background: #f7efe8;">
@@ -235,123 +236,8 @@
   </div>
 </div>
 
-<script>
-  // ===== БУРГЕР =====
-  const burger = document.getElementById('burgerBtn');
-  const navMenu = document.getElementById('navMenu');
-  burger.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-    const icon = burger.querySelector('i');
-    icon.className = navMenu.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
-  });
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      burger.querySelector('i').className = 'fas fa-bars';
-    });
-  });
-
-  // ===== FAQ АККОРДЕОН =====
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    question.addEventListener('click', () => {
-      faqItems.forEach(other => {
-        if (other !== item) other.classList.remove('active');
-      });
-      item.classList.toggle('active');
-    });
-  });
-
-  // ===== МОДАЛЬНОЕ ОКНО =====
-  const modalOverlay = document.getElementById('modalOverlay');
-  const formState = document.getElementById('formState');
-  const successState = document.getElementById('successState');
-  const closeBtn = document.getElementById('modalClose');
-  const backBtn = document.getElementById('backButton');
-  const bookingForm = document.getElementById('bookingForm');
-  const nameInput = document.getElementById('name');
-  const phoneInput = document.getElementById('phone');
-  const nameError = document.getElementById('nameError');
-  const phoneError = document.getElementById('phoneError');
-
-  // Открытие модалки
-  function openModal() {
-    formState.style.display = 'block';
-    successState.style.display = 'none';
-    bookingForm.reset();
-    nameInput.classList.remove('error');
-    phoneInput.classList.remove('error');
-    nameError.classList.remove('visible');
-    phoneError.classList.remove('visible');
-    modalOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  // Закрытие модалки
-  function closeModal() {
-    modalOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  // Вешаем обработчик на все кнопки с классом open-modal
-  document.querySelectorAll('.open-modal').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal();
-    });
-  });
-
- 
-  closeBtn.addEventListener('click', closeModal);
-
-  // Закрытие по клику на фон
-  modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) closeModal();
-  });
-
-  // Кнопка "Вернуться" (успех)
-  backBtn.addEventListener('click', closeModal);
-
-  // ===== ВАЛИДАЦИЯ =====
-  function validateName(value) {
-    return /^[a-zA-Zа-яА-ЯёЁ\s]+$/.test(value.trim());
-  }
-  function validatePhone(value) {
-    const digits = value.replace(/[\s\-()+]/g, '');
-    return /^\d+$/.test(digits) && digits.length >= 5;
-  }
-
-  bookingForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let isValid = true;
-
-    const name = nameInput.value;
-    if (!validateName(name)) {
-      nameInput.classList.add('error');
-      nameError.classList.add('visible');
-      isValid = false;
-    } else {
-      nameInput.classList.remove('error');
-      nameError.classList.remove('visible');
-    }
-
-    const phone = phoneInput.value;
-    if (!validatePhone(phone)) {
-      phoneInput.classList.add('error');
-      phoneError.classList.add('visible');
-      isValid = false;
-    } else {
-      phoneInput.classList.remove('error');
-      phoneError.classList.remove('visible');
-    }
-
-    if (isValid) {
-      formState.style.display = 'none';
-      successState.style.display = 'block';
-    }
-  });
-</script>
+<!-- ПОДКЛЮЧЕНИЕ ВНЕШНЕГО JS -->
+<script src="script.js"></script>
 
 </body>
 </html>
