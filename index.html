@@ -232,21 +232,5 @@
     </div>
   </div>
 </div>
-
-<script>
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var items = document.querySelectorAll('.faq-item');
-    items.forEach(function(item) {
-      var btn = item.querySelector('.faq-question');
-      btn.addEventListener('click', function() {
-        items.forEach(function(other) {
-          if (other !== item) other.classList.remove('active');
-        });
-        item.classList.toggle('active');
-      });
-    });
-  });
-</script>
 </body>
 </html>
