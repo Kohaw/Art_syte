@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>АРТ-АКАДЕМИЯ — художественная школа</title>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Подключаем CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -30,7 +33,7 @@
 </header>
 
 <main>
-  <!-- Главная -->
+  <!-- ГЕРОЙ -->
   <section class="hero">
     <div class="container hero-wrapper">
       <div class="hero-content">
@@ -41,6 +44,7 @@
           Мы помогаем развивать вкус, технику и уверенность в собственном стиле.
         </p>
         <div class="hero-btns">
+          <!-- КНОПКА С КЛАССОМ open-modal -->
           <a href="#" class="btn open-modal">Записаться на пробный урок</a>
           <a href="#directions" class="btn btn-outline">Посмотреть направления</a>
         </div>
@@ -128,6 +132,7 @@
             удобному времени и интересующему направлению. Первый шаг к творчеству может быть
             очень простым.
           </p>
+          <!-- ЕЩЁ ОДНА КНОПКА С КЛАССОМ open-modal -->
           <a href="#" class="btn open-modal">Записаться на пробный урок</a>
         </div>
       </div>
@@ -202,10 +207,9 @@
 <!-- ===== МОДАЛЬНОЕ ОКНО ===== -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal-content">
-    <!-- Кнопка закрытия (крестик) -->
     <button class="modal-close" id="modalClose">&times;</button>
 
-    <!-- Состояние 1: Форма записи -->
+    <!-- Состояние 1: Форма -->
     <div id="formState">
       <h2 class="modal-title">ЗАПИСЬ НА ПРОБНОЕ ЗАНЯТИЕ</h2>
       <form id="bookingForm" novalidate>
@@ -223,7 +227,7 @@
       </form>
     </div>
 
-    <!-- Состояние 2: Экран успеха (изначально скрыт) -->
+    <!-- Состояние 2: Успех -->
     <div id="successState" style="display: none;">
       <div class="success-icon">✔</div>
       <h2 class="modal-title">APT-АКАДЕМИЯ</h2>
@@ -233,7 +237,9 @@
     </div>
   </div>
 </div>
-  
-  
+
+<!-- Подключаем внешний JS -->
+<script src="script.js"></script>
+
 </body>
 </html>
