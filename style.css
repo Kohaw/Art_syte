@@ -525,14 +525,15 @@ footer {
     background: none;
     border: none;
     color: #2d2a24;
+    margin-left: auto;
   }
   .header-inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
   .logo {
     font-size: 1.4rem;
+    margin-right: 0;
   }
 
   nav ul {
