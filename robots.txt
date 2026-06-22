@@ -4,4 +4,4 @@ Disallow: /admin/
 Disallow: /css/
 Disallow: /js/
 Disallow: /images/
-Sitemap: https://kohaw.github.io/cat_syte/sitemap.xml
+Sitemap: https://kohaw.github.io/Art_syte/sitemap.xml
